@@ -56,3 +56,12 @@ processResources {
         expand props
     }
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'RemoteGUI'
+            from components.java
+        }
+    }
+}
