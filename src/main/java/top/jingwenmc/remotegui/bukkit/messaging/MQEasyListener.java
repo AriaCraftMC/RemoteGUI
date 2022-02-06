@@ -32,7 +32,7 @@ public class MQEasyListener extends MQEasyPlugin {
 
     @Override
     public void onReceiveNoReturn(MessageType messageType, String to, CommonMessage<String> message) {
-        if(messageType.equals(MessageType.PLAYER_NO_RETURN)) {
+        if(messageType.equals(MessageType.BUKKIT_PLAYER_NO_RETURN)) {
             try {
                 Player target = Bukkit.getPlayerExact(to);
                 RemoteGUIMessage remoteGUIMessage = MQEasyJsonUtil.parseJSON(message.getBody(),RemoteGUIMessage.class);
