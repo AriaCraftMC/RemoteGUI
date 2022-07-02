@@ -55,12 +55,12 @@ public class MQEasyListener extends MQEasyPlugin {
                     GUIActionMessage guiActionMessage = MQEasyJsonUtil.parseJSON(remoteGUIMessage.getMessage(),GUIActionMessage.class);
                     CallableGUI callableGUI = RemoteGUIBungee.getInstance().getGuiManager().get(guiActionMessage.getPlayerName());
                     if(callableGUI==null)return;
-                    int row = 0;
-                    int column = 0;
+                    int row;
+                    int column;
                     int num = guiActionMessage.getEvent().getWhichSlot();
                     column = num % 9;
                     row = (num - column)/9;
-                    callableGUI.getController().onGuiClick(row,column, guiActionMessage.getEvent());
+                    callableGUI.getController().onGuiClick(row,column, guiActionMessage.getEvent(), guiActionMessage.getPlayerName());
                 }
             } catch (Exception e) {
                 e.printStackTrace();
