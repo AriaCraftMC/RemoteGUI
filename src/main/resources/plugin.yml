@@ -1,6 +1,6 @@
 name: RemoteGUI
 version: '${version}'
-main: top.jingwenmc.remotegui.bukkit.RemoteGUIBukkit
+main: cn.accentry.remotegui.bukkit.RemoteGUIBukkit
 depend: [ MQEasy ]
 authors: [ jingwenMC ]
 description: Send player a gui on bungee!

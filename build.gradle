@@ -4,7 +4,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '4.0.4'
 }
 
-group = 'top.jingwenmc'
+group = 'cn.accentry'
 version = '3.0.0'
 
 repositories {
